@@ -11,11 +11,11 @@ export default {
 		themes: [
 			{
 				light: {
-					primary: "#FCEAA0",
-					secondary: "#058B5E",
-					accent: "#E8AB62",
-					neutral: "#EFFBFB",
-					"base-100": "#040A0A",
+					primary: "#88b5e4",
+					secondary: "#831e29",
+					accent: "#d0a732",
+					neutral: "#dfecf8",
+					"base-100": "#010b14",
 					info: "#3ABFF8",
 					success: "#36D399",
 					warning: "#FBBD23",
