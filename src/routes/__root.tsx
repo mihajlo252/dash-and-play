@@ -13,7 +13,7 @@ export const Route = createRootRoute({
       </motion.nav>
 
       <Outlet  />
-      {/* <TanStackRouterDevtools /> */}
+      <TanStackRouterDevtools />
     </div>
   ),
 })
