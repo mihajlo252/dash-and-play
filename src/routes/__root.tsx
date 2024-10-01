@@ -1,5 +1,5 @@
 import { createRootRoute, Link, Outlet } from '@tanstack/react-router'
-import { TanStackRouterDevtools } from '@tanstack/router-devtools'
+// import { TanStackRouterDevtools } from '@tanstack/router-devtools'
 import { motion } from "framer-motion";
 
 
@@ -13,7 +13,7 @@ export const Route = createRootRoute({
       </motion.nav>
 
       <Outlet  />
-      <TanStackRouterDevtools />
+      {/* <TanStackRouterDevtools /> */}
     </div>
   ),
 })
