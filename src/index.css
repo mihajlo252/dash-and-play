@@ -9,6 +9,8 @@
 	font-family: "K2D", sans-serif;
 }
 
-/* body {
-  overscroll-behavior: contain;
-} */
+@media (max-height: 475px) {
+  html {
+    font-size: 60%;
+  }
+}

@@ -32,9 +32,9 @@ export const Stats = () => {
     return (
         <>
             <div className="flex w-full flex-col items-center gap-1">
-                <h3 className="text-[30px] underline">Saving throws</h3>
+                <h3 className="text-[1.875rem] underline">Saving throws</h3>
 
-                <ul className="flex gap-2 text-[20px]">
+                <ul className="flex gap-2 text-[1.25rem]">
                     <li className="flex flex-col">
                         STR<span>+{savingThrows.STR}</span>
                     </li>
@@ -56,10 +56,10 @@ export const Stats = () => {
                 </ul>
             </div>
             <div className="flex w-full flex-col items-center gap-1">
-                <h3 className="text-[30px] underline">Skills</h3>
+                <h3 className="text-[1.875rem] underline">Skills</h3>
 
                 <div className="flex items-center gap-1">
-                    <ul className="flex flex-col text-[12px]">
+                    <ul className="flex flex-col text-[0.75rem]">
                         <li className="flex gap-2 border-b-2">
                             <span className="border-r-2 pr-2">
                                 +{skills.acrobatics}
@@ -115,7 +115,7 @@ export const Stats = () => {
                             Investigation (Int)
                         </li>
                     </ul>
-                    <ul className="flex flex-col text-[12px]">
+                    <ul className="flex flex-col text-[0.75rem]">
                         <li className="flex gap-2 border-b-2">
                             <span className="border-r-2 pr-2">
                                 +{skills.medicine}
