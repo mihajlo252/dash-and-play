@@ -19,8 +19,8 @@ function TraitsScreen() {
         "When you drop to 0 hit points, you can choose to stay conscious instead of falling unconscious. If you do, you gain temporary hit points equal to your total character level + your Constitution modifier (minimum 1), which last for up to one minute. In this state, you can take an action or bonus action on your turn, but not both, and can move only half of your movement speed. You remain in this state until you regain hit points, or until you no longer have temporary hit points. If you lose all temporary hit points in this state while you are still at 0 hit points, you fall unconscious and begin making death saving throws as normal. Once you use this trait, you can't use it again until you finish a long rest.",
     ];
     return (
-        <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-            <BoxSection styles="w-full p-5 flex-col text-start gap-2 overflow-y-scroll h-[75svh]">
+        <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="overflow-hidden">
+            <BoxSection styles="w-full p-5 flex-col text-start gap-2 overflow-y-scroll">
                 <h2 className="text-3xl underline">Racial Traits</h2>
                 {traits.map((traits, index) => (
                     <p key={index}>{traits}</p>
