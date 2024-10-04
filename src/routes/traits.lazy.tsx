@@ -20,7 +20,7 @@ function TraitsScreen() {
     ];
     return (
         <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-            <BoxSection styles="w-full p-5 flex-col text-start gap-2 overflow-y-scroll h-[85svh]">
+            <BoxSection styles="w-full p-5 flex-col text-start gap-2 overflow-y-scroll h-[75svh]">
                 <h2 className="text-3xl underline">Racial Traits</h2>
                 {traits.map((traits, index) => (
                     <p key={index}>{traits}</p>
