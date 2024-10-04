@@ -34,7 +34,7 @@ export const HPBar = ({maxHP}: {maxHP: number}) => {
                 </p>
                 <input
                     type="range"
-                    className={`absolute left-1/2 top-0 h-[120px] w-full -translate-x-1/2 -rotate-90 opacity-0`}
+                    className={`absolute left-1/2 top-0 h-[120px] w-full -translate-x-1/2 -rotate-90 touch-none opacity-0`}
                     min={0}
                     max={maxHP}
                     step={1}
