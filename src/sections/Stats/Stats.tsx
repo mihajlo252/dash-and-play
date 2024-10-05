@@ -1,34 +1,34 @@
-const savingThrows = {
-    STR: 0,
-    DEX: 6,
-    CON: 2,
-    INT: 3,
-    WIS: 2,
-    CHA: 2,
+interface SaveThrows {
+    str: number;
+    dex: number;
+    con: number;
+    int: number;
+    wis: number;
+    cha: number;
 }
 
-const skills = {
-    acrobatics: 6,
-    animalHandling: 2,
-    arcana: 0,
-    athletics: 0,
-    deception: 5,
-    history: 3,
-    insight: 2,
-    intimidation: 5,
-    investigation: 0,
-    medicine: 2,
-    nature: 0,
-    perception: 5,
-    performance: 2,
-    persuasion: 2,
-    religion: 0,
-    sleightOfHand: 6,
-    stealth: 6,
-    survival: 2,
+interface Skills {
+    acrobatics: number;
+    animalHandling: number;
+    arcana: number;
+    athletics: number;
+    deception: number;
+    history: number;
+    insight: number;
+    intimidation: number;
+    investigation: number;
+    medicine: number;
+    nature: number;
+    perception: number;
+    performance: number;
+    persuasion: number;
+    religion: number;
+    sleightOfHand: number;
+    stealth: number;
+    survival: number;
 }
 
-export const Stats = () => {
+export const Stats = ({ saveThrows, skills,}: {saveThrows: SaveThrows, skills: Skills}) => {
     return (
         <>
             <div className="flex w-full flex-col items-center gap-1">
@@ -36,22 +36,22 @@ export const Stats = () => {
 
                 <ul className="flex gap-2 text-[1.25rem]">
                     <li className="flex flex-col">
-                        STR<span>+{savingThrows.STR}</span>
+                        STR<span>+{saveThrows.str}</span>
                     </li>
                     <li className="flex flex-col">
-                        DEX<span>+{savingThrows.DEX}</span>
+                        DEX<span>+{saveThrows.dex}</span>
                     </li>
                     <li className="flex flex-col">
-                        CON<span>+{savingThrows.CON}</span>
+                        CON<span>+{saveThrows.con}</span>
                     </li>
                     <li className="flex flex-col">
-                        INT<span>+{savingThrows.INT}</span>
+                        INT<span>+{saveThrows.int}</span>
                     </li>
                     <li className="flex flex-col">
-                        WIS<span>+{savingThrows.WIS}</span>
+                        WIS<span>+{saveThrows.wis}</span>
                     </li>
                     <li className="flex flex-col">
-                        CHA<span>+{savingThrows.CHA}</span>
+                        CHA<span>+{saveThrows.cha}</span>
                     </li>
                 </ul>
             </div>
