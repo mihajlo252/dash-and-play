@@ -16,20 +16,22 @@ import { Route as rootRoute } from './routes/__root'
 
 // Create Virtual Routes
 
-const TraitsLazyImport = createFileRoute('/traits')()
 const IndexLazyImport = createFileRoute('/')()
+const TraitsRacialTraitsLazyImport = createFileRoute('/traits/racial-traits')()
 
 // Create/Update Routes
-
-const TraitsLazyRoute = TraitsLazyImport.update({
-  path: '/traits',
-  getParentRoute: () => rootRoute,
-} as any).lazy(() => import('./routes/traits.lazy').then((d) => d.Route))
 
 const IndexLazyRoute = IndexLazyImport.update({
   path: '/',
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/index.lazy').then((d) => d.Route))
+
+const TraitsRacialTraitsLazyRoute = TraitsRacialTraitsLazyImport.update({
+  path: '/traits/racial-traits',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() =>
+  import('./routes/traits/racial-traits.lazy').then((d) => d.Route),
+)
 
 // Populate the FileRoutesByPath interface
 
@@ -42,11 +44,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexLazyImport
       parentRoute: typeof rootRoute
     }
-    '/traits': {
-      id: '/traits'
-      path: '/traits'
-      fullPath: '/traits'
-      preLoaderRoute: typeof TraitsLazyImport
+    '/traits/racial-traits': {
+      id: '/traits/racial-traits'
+      path: '/traits/racial-traits'
+      fullPath: '/traits/racial-traits'
+      preLoaderRoute: typeof TraitsRacialTraitsLazyImport
       parentRoute: typeof rootRoute
     }
   }
@@ -56,7 +58,7 @@ declare module '@tanstack/react-router' {
 
 export const routeTree = rootRoute.addChildren({
   IndexLazyRoute,
-  TraitsLazyRoute,
+  TraitsRacialTraitsLazyRoute,
 })
 
 /* prettier-ignore-end */
@@ -68,14 +70,14 @@ export const routeTree = rootRoute.addChildren({
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/traits"
+        "/traits/racial-traits"
       ]
     },
     "/": {
       "filePath": "index.lazy.tsx"
     },
-    "/traits": {
-      "filePath": "traits.lazy.tsx"
+    "/traits/racial-traits": {
+      "filePath": "traits/racial-traits.lazy.tsx"
     }
   }
 }

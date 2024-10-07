@@ -1,34 +1,8 @@
-interface SaveThrows {
-    str: number;
-    dex: number;
-    con: number;
-    int: number;
-    wis: number;
-    cha: number;
-}
 
-interface Skills {
-    acrobatics: number;
-    animalHandling: number;
-    arcana: number;
-    athletics: number;
-    deception: number;
-    history: number;
-    insight: number;
-    intimidation: number;
-    investigation: number;
-    medicine: number;
-    nature: number;
-    perception: number;
-    performance: number;
-    persuasion: number;
-    religion: number;
-    sleightOfHand: number;
-    stealth: number;
-    survival: number;
-}
 
-export const Stats = ({ saveThrows, skills,}: {saveThrows: SaveThrows, skills: Skills}) => {
+
+
+export const Stats = ({ saveThrows, skills,}: {saveThrows: Values, skills: Skills}) => {
     return (
         <>
             <div className="flex w-full flex-col items-center gap-1">
