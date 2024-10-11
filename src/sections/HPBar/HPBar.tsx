@@ -26,11 +26,11 @@ export const HPBar = ({maxHP}: {maxHP: number}) => {
         <div className="flex items-center gap-1">
             <div className="relative h-[120px] w-[120px] overflow-hidden rounded-[100vh] border-4 border-neutral">
                 <div
-                    className={`h-full w-full origin-bottom bg-red-900`}
+                    className={`h-full w-full origin-bottom bg-gradient-to-b from-[#560000] to-[#980000]`}
                     style={{ transform: `scaleY(${scale})` }}
                 ></div>
                 <p className="user-select-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-                    {currentHP}
+                    {currentHP}/{maxHP}
                 </p>
                 <input
                     type="range"
