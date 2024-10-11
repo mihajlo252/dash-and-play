@@ -56,7 +56,7 @@ function Home() {
                 </div>
                 <BoxSection styles="w-[10%] flex flex-col py-5">
                     <nav className="flex flex-col gap-5 p-3">
-                        <Link to="/traits/racial-traits" className="btn btn-primary">
+                        <Link to="/traits" className="btn btn-primary">
                             Traits
                         </Link>
                     </nav>

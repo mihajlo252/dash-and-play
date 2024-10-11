@@ -28,8 +28,9 @@ interface Skills {
     survival: number;
 }
 
-interface Traits {
+interface Descriptions {
     racialTraits: string[];
+    featureTraits: string[];
 }
 
 interface CharacterProfile {
@@ -71,7 +72,7 @@ interface Character {
         saveThrows: Values;
         skills: Skills;
     };
-    traits: Traits;
+    descriptions: Descriptions;
 }
 
 interface CharacterStore  {
