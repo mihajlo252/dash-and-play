@@ -19,8 +19,8 @@ function TraitsScreen() {
 
     return (
         <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="overflow-hidden">
-            <BoxSection styles="w-full p-5 flex-col text-start gap-2 overflow-y-scroll">
-            <div>
+            <BoxSection styles="w-full p-5 flex-col text-start gap-2 overflow-y-scroll pt-0">
+            <div className="sticky -top-5 flex w-full gap-2 bg-base-300 pt-5">
                 <button onClick={() => changeDescription("racialTraits")} className="btn btn-ghost">Racial Traits</button>
                 <button onClick={() => changeDescription("featureTraits")} className="btn btn-ghost">Features & Traits</button>
             </div>
