@@ -47,10 +47,7 @@ function Home() {
                 </BoxSection>
                 <div className={`flex h-full w-[50%] flex-col gap-5`}>
                     <BoxSection styles="w-full flex justify-around items-center p-5">
-                        <div>
-                            <h2 className="text-3xl">HP Bar</h2>
-                        </div>
-                        <HPBar maxHP={character.stats.maxHP} />
+                        <HPBar maxHP={character.stats.maxHP} currentHP={character.currentHP} characterID={character.id} />
                     </BoxSection>
                     <BoxSection styles="w-full p-5">a</BoxSection>
                 </div>

@@ -59,7 +59,9 @@ interface Stats {
 }
 
 interface Character {
+    id: string;
     characterProfile: CharacterProfile;
+    currentHP: number;
     stats: {
         ac: number;
         hitDice: string;
