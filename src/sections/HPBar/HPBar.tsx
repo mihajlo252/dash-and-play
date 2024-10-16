@@ -1,14 +1,6 @@
 import { useState } from "react";
 import { sendData } from "../../utilities/sendData";
-export const HPBar = ({
-    maxHP,
-    currentHP,
-    characterID,
-}: {
-    maxHP: number;
-    currentHP: number;
-    characterID: string;
-}) => {
+export const HPBar = ({ maxHP, currentHP, characterID }: { maxHP: number; currentHP: number; characterID: string }) => {
     const [scale, setScale] = useState((currentHP / 100) * (100 / maxHP));
     const [HP, setHP] = useState(currentHP);
     const [save, setSave] = useState(false);
@@ -17,6 +9,9 @@ export const HPBar = ({
         setHP(parseInt(e.target.value));
         if (save === false) {
             setSave(true);
+        }
+        if (save === true && parseInt(e.target.value) === currentHP) {
+            setSave(false);
         }
     };
 
@@ -27,6 +22,9 @@ export const HPBar = ({
             if (save === false) {
                 setSave(true);
             }
+            if (save === true && HP - 1 === currentHP) {
+                setSave(false);
+            }
         }
     };
 
@@ -36,6 +34,9 @@ export const HPBar = ({
             setHP(HP + 1);
             if (save === false) {
                 setSave(true);
+            }
+            if (save === true && HP + 1 === currentHP) {
+                setSave(false);
             }
         }
     };

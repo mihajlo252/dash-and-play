@@ -14,15 +14,13 @@ export const Route = createLazyFileRoute("/")({
 
 function Home() {
     const [isLoading, setIsLoading] = useState(true);
-    const { character }  : CharacterStore = useCharacterStore();
-
+    const { character }: CharacterStore = useCharacterStore();
 
     useEffect(() => {
         setTimeout(() => {
             setIsLoading(false);
         }, 1000);
     }, []);
-
 
     if (!character) {
         return <div>{isLoading ? "" : "Loading..."}</div>;
@@ -40,14 +38,15 @@ function Home() {
             />
             <section className={`flex gap-5`}>
                 <BoxSection styles="w-[40%] flex flex-col gap-5 p-5">
-                    <Stats
-                        saveThrows={character.stats.saveThrows}
-                        skills={character.stats.skills}
-                    />
+                    <Stats saveThrows={character.stats.saveThrows} skills={character.stats.skills} />
                 </BoxSection>
                 <div className={`flex h-full w-[50%] flex-col gap-5`}>
                     <BoxSection styles="w-full flex justify-around items-center p-5">
-                        <HPBar maxHP={character.stats.maxHP} currentHP={character.currentHP} characterID={character.id} />
+                        <HPBar
+                            maxHP={character.stats.maxHP}
+                            currentHP={character.currentHP}
+                            characterID={character.id}
+                        />
                     </BoxSection>
                     <BoxSection styles="w-full p-5">a</BoxSection>
                 </div>
